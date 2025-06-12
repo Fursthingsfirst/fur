@@ -7,7 +7,7 @@
   <title>Contact – Furs Things First</title>
   <style>
     body {
-      background-color: #2196f3; /* solid light-medium blue */
+      background: linear-gradient(to bottom, #1565c0, #42a5f5);
       font-family: Arial, sans-serif;
       color: white;
       text-shadow: 1px 1px 2px black;
@@ -21,4 +21,174 @@
     }
 
     p {
-      font-size: 1.
+      font-size: 1.1em;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    form div {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 1.1em;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: #0288d1;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0277bd;
+    }
+
+    .contact-info {
+      max-width: 600px;
+      margin: 60px auto 20px auto;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .social-icons {
+      margin-top: 15px;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+    }
+
+    .social-icons img {
+      width: 30px;
+      height: 30px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Doggie Wedding Chaperone Enquiries</h1>
+  <p>Please fill in the form below to tell us about your dog’s big day 💍🐾</p>
+
+  <form action="https://formsubmit.co/fursthingsfirst1@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://fursthingsfirst.github.io/fur/thank-you.html">
+
+    <div>
+      <label for="couplename">Couple's Name:</label>
+      <input type="text" id="couplename" name="Couple's Name" required>
+    </div>
+
+    <div>
+      <label for="contactname">Contact Person & Phone Number:</label>
+      <input type="text" id="contactname" name="Contact Details" required>
+    </div>
+
+    <div>
+      <label for="backupcontact">Backup Contact Person & Number:</label>
+      <input type="text" id="backupcontact" name="Backup Contact">
+    </div>
+
+    <div>
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="Email" required>
+    </div>
+
+    <div>
+      <label for="weddingdate">Wedding Date:</label>
+      <input type="date" id="weddingdate" name="Wedding Date" required>
+    </div>
+
+    <div>
+      <label for="venue">Venue Name & Address:</label>
+      <input type="text" id="venue" name="Venue" required>
+    </div>
+
+    <div>
+      <label for="dogname">Dog(s) Name, Breed & Age:</label>
+      <textarea id="dogname" name="Dog Details" rows="3" required></textarea>
+    </div>
+
+    <div>
+      <label for="pickup">Preferred Time for Pick-Up/Drop-Off:</label>
+      <input type="text" id="pickup" name="Pick-Up/Drop-Off Time">
+    </div>
+
+    <div>
+      <label for="duration">Duration of Coverage (How Many Hours?):</label>
+      <input type="text" id="duration" name="Coverage Duration">
+    </div>
+
+    <div>
+      <label for="photos">Would you like your dog included in photos?</label>
+      <select id="photos" name="Photos">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="escort">Will your dog/dogs walk down the aisle?</label>
+      <select id="escort" name="Aisle Walk">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="otherpets">Any other pets involved?</label>
+      <input type="text" id="otherpets" name="Other Pets">
+    </div>
+
+    <div>
+      <label for="specialcare">Does your dog need any special care, meds or support?</label>
+      <textarea id="specialcare" name="Special Care Needs" rows="3"></textarea>
+    </div>
+
+    <div>
+      <label for="moreinfo">Anything else you'd like us to know?</label>
+      <textarea id="moreinfo" name="Extra Info" rows="4"></textarea>
+    </div>
+
+    <div style="text-align:center;">
+      <button type="submit">Send Wedding Enquiry</button>
+    </div>
+  </form>
+
+  <div class="contact-info">
+    <p>📞 Adam – 085 137 4535</p>
+    <p>📧 fursthingsfirst1@gmail.com</p>
+    <p>📍 Based in Waterford, Ireland</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/profile.php?id=61556219123886" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/furs_things_first/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
