@@ -1,0 +1,66 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #d6efff;
+    color: white;
+}
+header {
+    background-color: #d6efff;
+    text-align: center;
+    padding: 3em 1em 2em;
+}
+header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 4rem;
+    color: #0077b6;
+    text-shadow: 2px 2px 4px black;
+    margin: 0;
+}
+header p {
+    font-size: 1.4rem;
+    margin-top: 0.5em;
+    text-shadow: 1px 1px 2px black;
+}
+nav {
+    background-color: #4fa3d1;
+    padding: 1em;
+    text-align: center;
+}
+nav a {
+    margin: 0 1em;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    padding: 2em;
+}
+.card {
+    background-color: #0077b6;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    border-radius: 12px;
+    width: 300px;
+    padding: 1.5em;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-align: center;
+}
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+footer {
+    background: #4fa3d1;
+    text-align: center;
+    padding: 1.5em;
+    margin-top: 2em;
+    font-weight: bold;
+}
