@@ -53,10 +53,6 @@
       background-color: #0277bd;
     }
 
-    iframe {
-      border: none;
-    }
-
     p, label {
       font-size: 1.1em;
     }
@@ -67,6 +63,7 @@
   <h1>Contact Furs Things First</h1>
   <p style="text-align:center;">Got questions or want to book a service? Reach out using the form below!</p>
 
+  <!-- General Contact Form -->
   <form action="https://formsubmit.co/fursthingsfirst1@gmail.com" method="POST">
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_next" value="https://fursthingsfirst.github.io/fur/thank-you.html">
@@ -87,11 +84,35 @@
 
   <h2>🐶 Doggie Wedding Chaperone Enquiries</h2>
   <p style="text-align: center;">
-    For all wedding enquiries, please use this form below and tell us all about your dog’s big day 💍🐾
+    For all wedding enquiries, please use the form below and tell us all about your dog’s big day 💍🐾
   </p>
 
-  <iframe src="https://formsubmit.co/el/fursweddingform" width="100%" height="2000"></iframe>
+  <!-- Wedding Chaperone Enquiry Form -->
+  <form action="https://formsubmit.co/fursthingsfirst1@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://fursthingsfirst.github.io/fur/thank-you.html">
+    <input type="hidden" name="_subject" value="New Wedding Enquiry!">
+
+    <label for="couplename">Couple's Name:</label>
+    <input type="text" id="couplename" name="Couple's Name" required>
+
+    <label for="dogname">Dog's Name(s):</label>
+    <input type="text" id="dogname" name="Dog's Name(s)" required>
+
+    <label for="weddingdate">Wedding Date:</label>
+    <input type="date" id="weddingdate" name="Wedding Date" required>
+
+    <label for="venue">Wedding Venue:</label>
+    <input type="text" id="venue" name="Venue" required>
+
+    <label for="service">Interested Package (Gold, Silver, Bronze):</label>
+    <input type="text" id="service" name="Package" required>
+
+    <label for="details">Tell us about your plans:</label>
+    <textarea id="details" name="Details" rows="5" required></textarea>
+
+    <button type="submit">Send Wedding Enquiry</button>
+  </form>
 
 </body>
 </html>
-
