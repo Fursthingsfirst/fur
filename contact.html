@@ -2,41 +2,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Contact | Furs Things First</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact – Furs Things First</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #e3f2fd;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-shadow: 1px 1px 2px black;
+      padding: 20px;
+      margin: 0;
+    }
+
+    h1, h2 {
+      text-align: center;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      margin-top: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: #0288d1;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0277bd;
+    }
+
+    iframe {
+      border: none;
+    }
+
+    p, label {
+      font-size: 1.1em;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Furs Things First</h1>
-        <p>Dog Training • Dog Walking • Pet Transport • Wedding Chaperone</p>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="training.html">Training</a>
-        <a href="walking.html">Walking</a>
-        <a href="transport.html">Transport</a>
-        <a href="wedding.html">Weddings</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-    <div class="container">
-        <div class="card" style="width:100%; max-width: 700px;">
-            <h2>Contact Info</h2>
-            <p><strong>Phone:</strong> 0851374535</p>
-            <p><strong>Email:</strong> 
-                <a href="mailto:fursthingsfirst1@gmail.com" style="color:white;">
-                    fursthingsfirst1@gmail.com
-                </a>
-            </p>
-            <p><strong>Instagram:</strong> 
-                <a href="https://instagram.com/furs_things_first" target="_blank" style="color:white;">
-                    @furs_things_first
-                </a>
-            </p>
-        </div>
-    </div>
-    <footer>&copy; 2025 Furs Things First | Waterford, Ireland</footer>
+
+  <h1>Contact Furs Things First</h1>
+  <p style="text-align:center;">Got questions or want to book a service? Reach out using the form below!</p>
+
+  <form action="https://formsubmit.co/fursthingsfirst1@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://fursthingsfirst.github.io/fur/thank-you.html">
+
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="Name" required>
+
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" name="Email" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="Message" rows="5" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+  <hr style="margin: 50px 0;">
+
+  <h2>🐶 Doggie Wedding Chaperone Enquiries</h2>
+  <p style="text-align: center;">
+    For all wedding enquiries, please use this form below and tell us all about your dog’s big day 💍🐾
+  </p>
+
+  <iframe src="https://formsubmit.co/el/fursweddingform" width="100%" height="2000"></iframe>
+
 </body>
 </html>
 
