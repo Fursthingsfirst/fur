@@ -7,7 +7,7 @@
   <title>Contact – Furs Things First</title>
   <style>
     body {
-      background-color: #0d47a1; /* dark blue */
+      background-color: #1565c0; /* slightly lighter blue */
       font-family: Arial, sans-serif;
       color: white;
       text-shadow: 1px 1px 2px black;
@@ -118,4 +118,44 @@
 
     <div>
       <label for="photos">Would you like your dog included in photos?</label>
-      <select id="photos" name=
+      <select id="photos" name="Photos">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="escort">Should your dog walk down the aisle?</label>
+      <select id="escort" name="Aisle Walk">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="outdoor">Will there be outdoor or indoor time?</label>
+      <input type="text" id="outdoor" name="Indoor/Outdoor Plan">
+    </div>
+
+    <div>
+      <label for="otherpets">Any other pets involved?</label>
+      <input type="text" id="otherpets" name="Other Pets">
+    </div>
+
+    <div>
+      <label for="specialcare">Does your dog need any special care, meds or support?</label>
+      <textarea id="specialcare" name="Special Care Needs" rows="3"></textarea>
+    </div>
+
+    <div>
+      <label for="moreinfo">Anything else you'd like us to know?</label>
+      <textarea id="moreinfo" name="Extra Info" rows="4"></textarea>
+    </div>
+
+    <div style="text-align:center;">
+      <button type="submit">Send Wedding Enquiry</button>
+    </div>
+  </form>
+
+</body>
+</html>
