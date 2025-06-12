@@ -20,6 +20,11 @@
       text-shadow: 2px 2px 4px black;
     }
 
+    p {
+      font-size: 1.1em;
+      text-align: center;
+    }
+
     form {
       max-width: 600px;
       margin: 0 auto;
@@ -55,11 +60,6 @@
     button:hover {
       background-color: #0277bd;
     }
-
-    p {
-      font-size: 1.1em;
-      text-align: center;
-    }
   </style>
 </head>
 <body>
@@ -67,4 +67,25 @@
   <h1>Doggie Wedding Chaperone Enquiries</h1>
   <p>Please fill in the form below to tell us about your dog’s big day 💍🐾</p>
 
-  <form action="https://formsubmit.co/fursthingsfirst1@gmail.com" method="P
+  <form action="https://formsubmit.co/fursthingsfirst1@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://fursthingsfirst.github.io/fur/thank-you.html">
+    <input type="hidden" name="_subject" value="New Wedding Enquiry!">
+
+    <div>
+      <label for="couplename">Couple's Name:</label>
+      <input type="text" id="couplename" name="Couple's Name" required>
+    </div>
+
+    <div>
+      <label for="contactname">Contact Person & Phone Number:</label>
+      <input type="text" id="contactname" name="Contact Details" required>
+    </div>
+
+    <div>
+      <label for="backupcontact">Backup Contact Person & Number:</label>
+      <input type="text" id="backupcontact" name="Backup Contact">
+    </div>
+
+    <div>
+      <
