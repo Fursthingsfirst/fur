@@ -1,115 +1,59 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact – Furs Things First</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      background-color: #e3f2fd;
-      font-family: Arial, sans-serif;
-      color: white;
-      text-shadow: 1px 1px 2px black;
-      padding: 20px;
-      margin: 0;
-    }
+<form action="https://formsubmit.co/fursthingsfirst1@gmail.com" method="POST">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://fursthingsfirst.github.io/fur/thank-you.html">
+  <input type="hidden" name="_subject" value="New Wedding Enquiry!">
 
-    h1, h2 {
-      text-align: center;
-      text-shadow: 2px 2px 4px black;
-    }
+  <label for="couplename">Couple's Name:</label>
+  <input type="text" id="couplename" name="Couple's Name" required>
 
-    form {
-      max-width: 600px;
-      margin: 0 auto;
-    }
+  <label for="contactname">Contact Person & Phone Number:</label>
+  <input type="text" id="contactname" name="Contact Details" required>
 
-    label {
-      display: block;
-      margin-top: 15px;
-    }
+  <label for="backupcontact">Backup Contact Person & Number:</label>
+  <input type="text" id="backupcontact" name="Backup Contact">
 
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      border-radius: 5px;
-      border: none;
-      margin-top: 5px;
-    }
+  <label for="email">Your Email:</label>
+  <input type="email" id="email" name="Email" required>
 
-    button {
-      margin-top: 20px;
-      background-color: #0288d1;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+  <label for="weddingdate">Wedding Date:</label>
+  <input type="date" id="weddingdate" name="Wedding Date" required>
 
-    button:hover {
-      background-color: #0277bd;
-    }
+  <label for="venue">Venue Name & Address:</label>
+  <input type="text" id="venue" name="Venue" required>
 
-    p, label {
-      font-size: 1.1em;
-    }
+  <label for="dogname">Dog(s) Name, Breed & Age:</label>
+  <textarea id="dogname" name="Dog Details" rows="3" required></textarea>
 
-    .contact-info {
-      max-width: 600px;
-      margin: 0 auto 50px auto;
-      text-align: center;
-      background: rgba(0,0,0,0.1);
-      padding: 20px;
-      border-radius: 10px;
-    }
-  </style>
-</head>
-<body>
+  <label for="pickup">Preferred Time for Pick-Up/Drop-Off:</label>
+  <input type="text" id="pickup" name="Pick-Up/Drop-Off Time">
 
-  <h1>Contact Furs Things First</h1>
-  <div class="contact-info">
-    <p>📞 Adam – 083 123 4567</p>
-    <p>📧 fursthingsfirst1@gmail.com</p>
-    <p>📍 Waterford, Ireland</p>
-    <p>Feel free to text, call, or email for dog walking, training, pet transport and more!</p>
-  </div>
+  <label for="duration">Duration of Coverage (How Many Hours?):</label>
+  <input type="text" id="duration" name="Coverage Duration">
 
-  <hr style="margin: 50px 0;">
+  <label for="photos">Would you like your dog included in photos?</label>
+  <select id="photos" name="Photos">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+  </select>
 
-  <h2>🐶 Doggie Wedding Chaperone Enquiries</h2>
-  <p style="text-align: center;">
-    For all wedding enquiries, please use the form below and tell us all about your dog’s big day 💍🐾
-  </p>
+  <label for="escort">Should your dog walk down the aisle?</label>
+  <select id="escort" name="Aisle Walk">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+  </select>
 
-  <!-- Wedding Chaperone Enquiry Form -->
-  <form action="https://formsubmit.co/fursthingsfirst1@gmail.com" method="POST">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="https://fursthingsfirst.github.io/fur/thank-you.html">
-    <input type="hidden" name="_subject" value="New Wedding Enquiry!">
+  <label for="outdoor">Will there be outdoor or indoor time?</label>
+  <input type="text" id="outdoor" name="Indoor/Outdoor Plan">
 
-    <label for="couplename">Couple's Name:</label>
-    <input type="text" id="couplename" name="Couple's Name" required>
+  <label for="otherpets">Any other pets involved?</label>
+  <input type="text" id="otherpets" name="Other Pets">
 
-    <label for="dogname">Dog's Name(s):</label>
-    <input type="text" id="dogname" name="Dog's Name(s)" required>
+  <label for="specialcare">Does your dog need any special care, meds or support?</label>
+  <textarea id="specialcare" name="Special Care Needs" rows="3"></textarea>
 
-    <label for="weddingdate">Wedding Date:</label>
-    <input type="date" id="weddingdate" name="Wedding Date" required>
+  <label for="moreinfo">Anything else you'd like us to know?</label>
+  <textarea id="moreinfo" name="Extra Info" rows="4"></textarea>
 
-    <label for="venue">Wedding Venue:</label>
-    <input type="text" id="venue" name="Venue" required>
-
-    <label for="service">Interested Package (Gold, Silver, Bronze):</label>
-    <input type="text" id="service" name="Package" required>
-
-    <label for="details">Tell us about your plans:</label>
-    <textarea id="details" name="Details" rows="5" required></textarea>
-
-    <button type="submit">Send Wedding Enquiry</button>
-  </form>
-
-</body>
-</html>
+  <button type="submit">Send Wedding Enquiry</button>
+</form>
