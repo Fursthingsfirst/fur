@@ -28,4 +28,80 @@
     nav a {
       margin: 0.5em;
       color: white;
-      text-decorati
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #ffdd57;
+    }
+
+    .main-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2em;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2em;
+    }
+
+    .card {
+      background-color: #0077b6;
+      color: white;
+      text-shadow: 1px 1px 2px black;
+      border-radius: 12px;
+      width: 280px;
+      padding: 1.5em;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1em;
+    }
+
+    footer {
+      background: #4fa3d1;
+      text-align: center;
+      padding: 1.5em;
+      margin-top: 2em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <!-- Fix: no cropping, auto scaling -->
+  <img src="header-banner.png" alt="Furs Things First Banner" style="width: 100%; height: auto; display: block;">
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="training.html">Dog Training</a>
+  <a href="walking.html">Dog Walking</a>
+  <a href="transport.html">Pet Transport</a>
+  <a href="wedding.html">Weddings</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="main-container">
+  <div class="container">
+
+    <div class="card">
+      <img src="dog-training.jpg" alt="Dog Training" onerror="this.style.display='none'">
+      <h2>Dog Training</h2>
+      <p>Positive, fun and professional training tailored to your dog.</p>
+    </div>
+
+    <div class="card">
+      <img src
