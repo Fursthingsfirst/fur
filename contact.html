@@ -44,10 +44,10 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
-    h1 {
+    h1, h2 {
       text-align: center;
-      margin-bottom: 1em;
       color: white;
+      margin-bottom: 1em;
     }
 
     form label {
@@ -102,11 +102,13 @@
 
   <div class="form-container">
     <h1>Contact Us</h1>
-    <p>Fill out the form below and we’ll get back to you as soon as we can.</p>
+    <p>Please fill out the form below with as much detail as possible.</p>
 
     <form action="https://formspree.io/f/mkgbvnww" method="POST">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://fursthingsfirst.ie/thank-you.html">
+
+      <h2>💍 Wedding Day Details</h2>
 
       <label>Full Name:</label>
       <input type="text" name="name" required>
@@ -115,34 +117,75 @@
       <input type="email" name="email" required>
 
       <label>Phone Number:</label>
-      <input type="tel" name="phone" required>
+      <input type="tel" name="phone">
 
-      <label>What service are you interested in?</label>
-      <select name="service">
-        <option value="">-- Select --</option>
-        <option>Dog Training</option>
-        <option>Dog Walking</option>
-        <option>Pet Transport</option>
-        <option>Wedding Chaperone</option>
-        <option>Other</option>
+      <label>Wedding Date & Venue Location:</label>
+      <input type="text" name="wedding_date_location">
+
+      <label>Pick-up Time for Dog:</label>
+      <input type="text" name="pickup_time">
+
+      <label>Do you need us to return your dog home after the event?</label>
+      <select name="return_required">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Not Sure Yet">Not Sure Yet</option>
       </select>
 
-      <label>Preferred Date / Time:</label>
-      <input type="text" name="preferred_time" placeholder="e.g. Friday afternoon, June 21st">
+      <label>Which parts of the day will your dog be involved in?</label>
+      <textarea name="dog_involvement" rows="2" placeholder="e.g., ceremony, photos, reception"></textarea>
 
-      <label>How many dogs is this for?</label>
-      <input type="number" name="number_of_dogs" min="1" max="10">
+      <label>Would you like your dog to wear an outfit or accessory?</label>
+      <input type="text" name="outfit_details" placeholder="e.g., bow tie, bandana, flower collar">
 
-      <label>Pick-up Location:</label>
-      <input type="text" name="pickup_location">
+      <label>Would you like help with photos of your dog on the day?</label>
+      <select name="photos_help">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
 
-      <label>Drop-off Location (if different):</label>
-      <input type="text" name="dropoff_location">
+      <label>Preferred contact method:</label>
+      <select name="contact_preference">
+        <option>Email</option>
+        <option>Phone</option>
+        <option>Text</option>
+      </select>
 
-      <label>Does your dog have any special needs or quirks?</label>
-      <textarea name="special_needs" rows="3"></textarea>
+      <h2>🐶 Dog Information</h2>
 
-      <label>Any other notes or questions?</label>
+      <label>How many dogs will need chaperoning?</label>
+      <select name="number_of_dogs" required>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+
+      <label>Tell us about each dog (name, breed, age, behaviour):</label>
+      <textarea name="dog_info" rows="5" placeholder="1. Max – Labrador – 4 yrs – Very friendly&#10;2. Bella – Pug – 7 yrs – Nervous in crowds"></textarea>
+
+      <label>How does your dog handle busy environments and noise?</label>
+      <textarea name="environment_comfort" rows="2"></textarea>
+
+      <label>Is your dog friendly with strangers, children, and other dogs?</label>
+      <select name="dog_temperament">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Sometimes">Sometimes</option>
+      </select>
+
+      <label>Does your dog have any medical or behavioural needs?</label>
+      <textarea name="special_needs" rows="2"></textarea>
+
+      <label>Is your dog fully vaccinated?</label>
+      <select name="vaccinated">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Not Sure">Not Sure</option>
+      </select>
+
+      <h2>✍️ Final Notes</h2>
+
+      <label>Anything else you'd like us to know?</label>
       <textarea name="notes" rows="4"></textarea>
 
       <input type="submit" value="Send Message">
