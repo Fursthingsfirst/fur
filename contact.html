@@ -2,98 +2,91 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact – Furs Things First</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
       background-color: #d6efff;
+      font-family: Arial, sans-serif;
       color: white;
-      font-size: 1rem;
     }
+
     header {
       text-align: center;
     }
+
     nav {
       background-color: #4fa3d1;
       padding: 1em;
       text-align: center;
     }
+
     nav a {
       margin: 0.5em;
       color: white;
       text-decoration: none;
       font-weight: bold;
-      display: inline-block;
     }
+
     nav a:hover {
-      text-decoration: underline;
       color: #ffdd57;
+      text-decoration: underline;
     }
-    .main-container {
-      max-width: 1000px;
+
+    .container {
+      max-width: 800px;
       margin: 0 auto;
       padding: 2em;
-    }
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2em;
-    }
-    .card {
-      background-color: #0077b6;
-      color: white;
-      text-shadow: 1px 1px 2px black;
+      background-color: #4fa3d1;
       border-radius: 12px;
-      width: 280px;
-      padding: 1.5em;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
-    .card img {
-      max-width: 100%;
-      border-radius: 10px;
+
+    h1 {
+      text-align: center;
       margin-bottom: 1em;
     }
-    label, input, textarea {
+
+    form label {
       display: block;
-      width: 100%;
       margin-top: 1em;
+      font-weight: bold;
     }
-    input, textarea {
-      padding: 0.8em;
-      border-radius: 6px;
-      border: none;
-    }
-    button {
-      margin-top: 1.5em;
-      padding: 1em;
+
+    input, textarea, select {
       width: 100%;
-      background-color: #0077b6;
-      color: white;
-      font-size: 1rem;
+      padding: 0.8em;
+      margin-top: 0.3em;
       border: none;
-      border-radius: 6px;
+      border-radius: 8px;
+    }
+
+    input[type="submit"] {
+      margin-top: 2em;
+      background-color: #ffdd57;
+      color: black;
+      font-weight: bold;
       cursor: pointer;
     }
-    button:hover {
-      background-color: #005f87;
-    }
+
     footer {
-      background: #4fa3d1;
+      background-color: #4fa3d1;
       text-align: center;
       padding: 1.5em;
       margin-top: 2em;
-      font-weight: bold;
+    }
+
+    a {
+      color: #ffdd57;
     }
   </style>
 </head>
 <body>
+
 <header>
-  <img src="header-banner.png" alt="Furs Things First Header" style="width: 100%; max-height: 300px; object-fit: cover;">
+  <img src="header-banner.png" alt="Furs Things First Banner" style="width: 100%; height: auto; display: block;">
 </header>
 
 <nav>
@@ -106,46 +99,61 @@
   <a href="contact.html">Contact</a>
 </nav>
 
-<div class="main-container">
-  <h1 style="text-align:center;">Contact Us</h1>
-  
-      <form action="https://formspree.io/f/yourformid" method="POST">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" required>
+<div class="container">
+  <h1>Contact Us</h1>
+  <form action="https://formspree.io/f/yourformid" method="POST">
+    <label>Full Name:</label>
+    <input type="text" name="name" required>
 
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" required>
+    <label>Email Address:</label>
+    <input type="email" name="email" required>
 
-        <label for="message">General Message</label>
-        <textarea id="message" name="message" rows="4"></textarea>
+    <label>Phone Number:</label>
+    <input type="tel" name="phone">
 
-        <hr>
+    <label>Which service are you enquiring about?</label>
+    <select name="service">
+      <option>Dog Training</option>
+      <option>Dog Walking</option>
+      <option>Pet Transport</option>
+      <option>Weddings</option>
+      <option>Other</option>
+    </select>
 
-        <h2 style="text-align:center;">Wedding Chaperone Enquiry</h2>
+    <label>Dog's Name:</label>
+    <input type="text" name="dogname">
 
-        <label for="weddingDate">Wedding Date</label>
-        <input type="date" id="weddingDate" name="weddingDate">
+    <label>Dog’s Breed:</label>
+    <input type="text" name="breed">
 
-        <label for="location">Wedding Location</label>
-        <input type="text" id="location" name="location">
+    <label>Dog’s Age:</label>
+    <input type="number" name="age" min="0">
 
-        <label for="dogName">Dog's Name</label>
-        <input type="text" id="dogName" name="dogName">
+    <label>Preferred Date(s):</label>
+    <input type="text" name="date">
 
-        <label for="services">What services do you need?</label>
-        <textarea id="services" name="services" rows="3"></textarea>
+    <label>Location:</label>
+    <input type="text" name="location">
 
-        <label for="notes">Any allergies, behaviour notes, or special instructions?</label>
-        <textarea id="notes" name="notes" rows="3"></textarea>
+    <label>Additional Notes or Questions:</label>
+    <textarea name="message" rows="4"></textarea>
 
-        <button type="submit">Send Message</button>
-      </form>
-    
+    <input type="submit" value="Send Message">
+  </form>
+
+  <br><br>
+  <strong>Contact Info:</strong><br>
+  📞 <a href="tel:+353851374535">085 1374535</a><br>
+
+  <img src="https://cdn-icons-png.flaticon.com/24/732/732200.png" alt="Email" style="vertical-align: middle;">
+  <a href="mailto:@fursthingsfirst.ie">@fursthingsfirst.ie</a><br>
+
+  <img src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png" alt="Instagram" style="vertical-align: middle;">
+  <a href="https://www.instagram.com/furs_things_first/" target="_blank">furs_things_first/</a><br>
+
+  <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" style="vertical-align: middle;">
+  <a href="https://www.facebook.com/profile.php?id=61556219123886" target="_blank">Furs Things First on Facebook</a>
 </div>
 
 <footer>
-  © 2025 Furs Things First – All rights reserved
-</footer>
-
-</body>
-</html>
+  © 2025 Furs
