@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact – Furs Things First</title>
+  <title>Doggie Wedding Chaperone – Furs Things First</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background-color: #d6efff;
       font-family: Arial, sans-serif;
+      background-color: #d6efff;
       color: white;
     }
 
@@ -35,18 +35,19 @@
       text-decoration: underline;
     }
 
-    .container {
+    .form-container {
       max-width: 800px;
-      margin: 0 auto;
+      margin: 2em auto;
       padding: 2em;
       background-color: #4fa3d1;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
-    h1 {
+    h1, h2 {
       text-align: center;
       margin-bottom: 1em;
+      color: white;
     }
 
     form label {
@@ -85,41 +86,117 @@
 </head>
 <body>
 
-<header>
-  <img src="header-banner.png" alt="Furs Things First Banner" style="width: 100%; height: auto; display: block;">
-</header>
+  <header>
+    <img src="header-banner.png" alt="Furs Things First Banner" style="width: 100%; height: auto; display: block;">
+  </header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="training.html">Dog Training</a>
-  <a href="walking.html">Dog Walking</a>
-  <a href="transport.html">Pet Transport</a>
-  <a href="wedding.html">Weddings</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-</nav>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="training.html">Dog Training</a>
+    <a href="walking.html">Dog Walking</a>
+    <a href="transport.html">Pet Transport</a>
+    <a href="wedding.html">Weddings</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-<div class="container">
-  <h1>Contact Us</h1>
-  <form action="https://formsubmit.co/fursthingsfirst1@gmail.com" method="POST">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://fursthingsfirst.ie/thank-you.html">
+  <div class="form-container">
+    <h1>Doggie Wedding Chaperone Form</h1>
+    <p>Please fill out the form below to help us tailor your wedding day dog care service.</p>
 
+    <form action="https://formsubmit.co/fursthingsfirst1@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://fursthingsfirst.ie/thank-you.html">
 
-  <br><br>
-  <strong>Contact Info:</strong><br>
-  📞 <a href="tel:+353851374535">085 1374535</a><br>
+      <!-- 💍 Wedding Day Details -->
+      <h2>💍 Wedding Day Details</h2>
 
-  <img src="https://cdn-icons-png.flaticon.com/24/732/732200.png" alt="Email" style="vertical-align: middle;">
-  <a href="mailto:fursthingsfirst1@gmail.com">fursthingsfirst1@gmail.com</a><br>
+      <label>Full Name:</label>
+      <input type="text" name="name" required>
 
-  <img src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png" alt="Instagram" style="vertical-align: middle;">
-  <a href="https://www.instagram.com/furs_things_first/" target="_blank">Furs Things First On Instagram</a><br>
+      <label>Email Address:</label>
+      <input type="email" name="email" required>
 
-  <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" style="vertical-align: middle;">
-  <a href="https://www.facebook.com/profile.php?id=61556219123886" target="_blank">Furs Things First on Facebook</a>
-</div>
+      <label>Phone Number:</label>
+      <input type="tel" name="phone">
 
-<footer>
-  © 2025 Furs Things First - All Rights Reserved
-  
+      <label>Wedding Date & Venue Location:</label>
+      <input type="text" name="wedding_date_location">
+
+      <label>Pick-up Time for Dog:</label>
+      <input type="text" name="pickup_time">
+
+      <label>Do you need us to return your dog home after the event?</label>
+      <select name="return_required">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Not Sure Yet">Not Sure Yet</option>
+      </select>
+
+      <label>Which parts of the day will your dog be involved in?</label>
+      <textarea name="dog_involvement" rows="2" placeholder="e.g., ceremony, photos, reception"></textarea>
+
+      <label>Would you like your dog to wear an outfit or accessory?</label>
+      <input type="text" name="outfit_details" placeholder="e.g., bow tie, bandana, flower collar">
+
+      <label>Would you like help with photos of your dog on the day?</label>
+      <select name="photos_help">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
+      <label>Preferred contact method:</label>
+      <select name="contact_preference">
+        <option>Email</option>
+        <option>Phone</option>
+        <option>Text</option>
+      </select>
+
+      <!-- 🐶 Dog Information -->
+      <h2>🐶 Dog Information</h2>
+
+      <label>How many dogs will need chaperoning?</label>
+      <select name="number_of_dogs" required>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+
+      <label>Tell us about each dog (name, breed, age, behaviour):</label>
+      <textarea name="dog_info" rows="5" placeholder="1. Max – Labrador – 4 yrs – Very friendly&#10;2. Bella – Pug – 7 yrs – Nervous in crowds"></textarea>
+
+      <label>How does your dog handle busy environments and noise?</label>
+      <textarea name="environment_comfort" rows="2"></textarea>
+
+      <label>Is your dog friendly with strangers, children, and other dogs?</label>
+      <select name="dog_temperament">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Sometimes">Sometimes</option>
+      </select>
+
+      <label>Does your dog have any medical or behavioural needs?</label>
+      <textarea name="special_needs" rows="2"></textarea>
+
+      <label>Is your dog fully vaccinated?</label>
+      <select name="vaccinated">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Not Sure">Not Sure</option>
+      </select>
+
+      <!-- ✍️ Final Notes -->
+      <h2>✍️ Final Notes</h2>
+
+      <label>Anything else you'd like us to know?</label>
+      <textarea name="notes" rows="4"></textarea>
+
+      <input type="submit" value="Send Message">
+    </form>
+  </div>
+
+  <footer>
+    © 2025 Furs Things First – All rights reserved
+  </footer>
+</body>
+</html>
