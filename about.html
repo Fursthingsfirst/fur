@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us</title>
+  <title>About – Furs Things First</title>
   <style>
     body {
       margin: 0;
@@ -13,14 +13,18 @@
       color: white;
       font-size: 1rem;
     }
+
     header {
       text-align: center;
     }
+
     nav {
       background-color: #4fa3d1;
       padding: 1em;
       text-align: center;
+      flex-wrap: wrap;
     }
+
     nav a {
       margin: 0.5em;
       color: white;
@@ -28,60 +32,34 @@
       font-weight: bold;
       display: inline-block;
     }
+
     nav a:hover {
       text-decoration: underline;
       color: #ffdd57;
     }
+
     .main-container {
       max-width: 1000px;
       margin: 0 auto;
       padding: 2em;
-    }
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2em;
-    }
-    .card {
-      background-color: #0077b6;
-      color: white;
-      text-shadow: 1px 1px 2px black;
-      border-radius: 12px;
-      width: 280px;
-      padding: 1.5em;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
       text-align: center;
     }
-    .card img {
+
+    .content-box {
+      background-color: #4fa3d1;
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .main-container img {
       max-width: 100%;
+      height: auto;
       border-radius: 10px;
-      margin-bottom: 1em;
-    }
-    label, input, textarea {
-      display: block;
-      width: 100%;
-      margin-top: 1em;
-    }
-    input, textarea {
-      padding: 0.8em;
-      border-radius: 6px;
-      border: none;
-    }
-    button {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
       margin-top: 1.5em;
-      padding: 1em;
-      width: 100%;
-      background-color: #0077b6;
-      color: white;
-      font-size: 1rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
     }
-    button:hover {
-      background-color: #005f87;
-    }
+
     footer {
       background: #4fa3d1;
       text-align: center;
@@ -92,8 +70,9 @@
   </style>
 </head>
 <body>
+
 <header>
-  <img src="header-banner.png" alt="Furs Things First Header" style="width: 100%; max-height: 300px; object-fit: cover;">
+  <img src="adam-with-dog.png" alt="Furs Things First Banner" style="width: 100%; height: auto; display: block;">
 </header>
 
 <nav>
@@ -107,8 +86,26 @@
 </nav>
 
 <div class="main-container">
-  <h1 style="text-align:center;">About Us</h1>
-  <p>Adam from Waterford runs Furs Things First – a local, personal pet care service.</p>
+  <div class="content-box">
+    <h1>About</h1>
+    <p>
+      Hi, I’m Adam — founder of <strong>Furs Things First</strong> based in Waterford, Ireland.<br><br>
+
+  I started this business with the goal of helping dogs and their owners to live a happier, healthier life. Whether it’s training, walking, transport, or making sure your dog is part of your big day, I take pride in offering professional, personal and reliable care for every four-legged client.<br><br>
+
+  With years of hands-on experience, full insurance, and a real passion for animals, I’ve built a service people trust — and dogs love. I understand that every pet is different, and I take the time to get to know each one, tailoring every service to suit their needs and personality.<br><br>
+
+  Thank you for supporting us and I look forward to meeting you and your dog soon!<br><br>
+
+      <strong>Contact:</strong><br>
+  📞 <a href="tel:+353871234567" style="color: #ffdd57;">087 123 4567</a><br>
+  📧 <a href="mailto:fursthingsfirst@example.com" style="color: #ffdd57;">fursthingsfirst@example.com</a><br>
+  📸 <a href="https://www.instagram.com/yourinsta" target="_blank" style="color: #ffdd57;">@fursthingsfirst</a><br>
+  👍 <a href="https://www.facebook.com/yourfacebook" target="_blank" style="color: #ffdd57;">Furs Things First on Facebook</a>
+    </p>
+  </div>
+
+  <img src="adam-with-dog.jpg" alt="Dog training session" onerror="this.style.display='none'">
 </div>
 
 <footer>
