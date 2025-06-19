@@ -13,12 +13,18 @@
       color: white;
       font-size: 1rem;
     }
-    header { text-align: center; }
+
+    header {
+      text-align: center;
+    }
+
     nav {
       background-color: #4fa3d1;
       padding: 1em;
       text-align: center;
+      flex-wrap: wrap;
     }
+
     nav a {
       margin: 0.5em;
       color: white;
@@ -26,22 +32,27 @@
       font-weight: bold;
       display: inline-block;
     }
+
     nav a:hover {
       text-decoration: underline;
       color: #ffdd57;
     }
+
     .main-container {
       max-width: 1000px;
       margin: 0 auto;
       padding: 2em;
       text-align: center;
     }
+
     .content-box {
       background-color: #4fa3d1;
       padding: 2em;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      color: white;
     }
+
     .main-container img {
       max-width: 100%;
       height: auto;
@@ -49,6 +60,7 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
       margin-top: 1.5em;
     }
+
     footer {
       background: #4fa3d1;
       text-align: center;
@@ -59,9 +71,11 @@
   </style>
 </head>
 <body>
+
 <header>
   <img src="header-banner.png" alt="Furs Things First Banner" style="width: 100%; height: auto; display: block;">
 </header>
+
 <nav>
   <a href="index.html">Home</a>
   <a href="training.html">Dog Training</a>
@@ -71,6 +85,7 @@
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
 </nav>
+
 <div class="main-container">
   <div class="content-box">
     <h1>Dog Walking</h1>
@@ -79,10 +94,13 @@
       Whether it's a quick toilet break or a full-on sniffari, we've got your pup covered.
     </p>
   </div>
+
   <img src="dog-walking.jpg" alt="Dog Walking" onerror="this.style.display='none'">
 </div>
+
 <footer>
   © 2025 Furs Things First – All rights reserved
 </footer>
+
 </body>
 </html>
