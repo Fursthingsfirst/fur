@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Weddings</title>
+  <title>Weddings – Furs Things First</title>
   <style>
     body {
       margin: 0;
@@ -13,14 +13,18 @@
       color: white;
       font-size: 1rem;
     }
+
     header {
       text-align: center;
     }
+
     nav {
       background-color: #4fa3d1;
       padding: 1em;
       text-align: center;
+      flex-wrap: wrap;
     }
+
     nav a {
       margin: 0.5em;
       color: white;
@@ -28,60 +32,34 @@
       font-weight: bold;
       display: inline-block;
     }
+
     nav a:hover {
       text-decoration: underline;
       color: #ffdd57;
     }
+
     .main-container {
       max-width: 1000px;
       margin: 0 auto;
       padding: 2em;
-    }
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2em;
-    }
-    .card {
-      background-color: #0077b6;
-      color: white;
-      text-shadow: 1px 1px 2px black;
-      border-radius: 12px;
-      width: 280px;
-      padding: 1.5em;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
       text-align: center;
     }
-    .card img {
+
+    .content-box {
+      background-color: #4fa3d1;
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .main-container img {
       max-width: 100%;
+      height: auto;
       border-radius: 10px;
-      margin-bottom: 1em;
-    }
-    label, input, textarea {
-      display: block;
-      width: 100%;
-      margin-top: 1em;
-    }
-    input, textarea {
-      padding: 0.8em;
-      border-radius: 6px;
-      border: none;
-    }
-    button {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
       margin-top: 1.5em;
-      padding: 1em;
-      width: 100%;
-      background-color: #0077b6;
-      color: white;
-      font-size: 1rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
     }
-    button:hover {
-      background-color: #005f87;
-    }
+
     footer {
       background: #4fa3d1;
       text-align: center;
@@ -92,8 +70,9 @@
   </style>
 </head>
 <body>
+
 <header>
-  <img src="header-banner.png" alt="Furs Things First Header" style="width: 100%; max-height: 300px; object-fit: cover;">
+  <img src="header-banner.png" alt="Furs Things First Banner" style="width: 100%; height: auto; display: block;">
 </header>
 
 <nav>
@@ -107,8 +86,16 @@
 </nav>
 
 <div class="main-container">
-  <h1 style="text-align:center;">Weddings</h1>
-  <p>Gold, Silver & Bronze chaperone packages available. Contact for pricing.</p>
+  <div class="content-box">
+    <h1>Dog Training</h1>
+    <p>
+      Your dog is family — so why shouldn’t they be part of your big day?<br><br>
+
+  At <strong>Furs Things First</strong>, we offer a professional dog chaperone service so your best friend can be by your side on one of the most important days of your life. Whether you want them walking down the aisle, included in photos, or just part of the fun, we’ll make it stress-free and special for both of you.<br><br>
+    </p>
+  </div>
+
+  <img src="wedding-chaperone.jpg" alt="Dog training session" onerror="this.style.display='none'">
 </div>
 
 <footer>
