@@ -44,7 +44,7 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
-    h1, h2 {
+    h1 {
       text-align: center;
       margin-bottom: 1em;
       color: white;
@@ -102,7 +102,7 @@
 
   <div class="form-container">
     <h1>Contact Us</h1>
-    <p>Please use the form below to get in touch — whether it’s a question, booking, or just to say hi!</p>
+    <p>Fill out the form below and we’ll get back to you as soon as we can.</p>
 
     <form action="https://formspree.io/f/mkgbvnww" method="POST">
       <input type="hidden" name="_captcha" value="false">
@@ -115,13 +115,35 @@
       <input type="email" name="email" required>
 
       <label>Phone Number:</label>
-      <input type="tel" name="phone">
+      <input type="tel" name="phone" required>
 
-      <label>Subject:</label>
-      <input type="text" name="subject">
+      <label>What service are you interested in?</label>
+      <select name="service">
+        <option value="">-- Select --</option>
+        <option>Dog Training</option>
+        <option>Dog Walking</option>
+        <option>Pet Transport</option>
+        <option>Wedding Chaperone</option>
+        <option>Other</option>
+      </select>
 
-      <label>Message:</label>
-      <textarea name="message" rows="6" required></textarea>
+      <label>Preferred Date / Time:</label>
+      <input type="text" name="preferred_time" placeholder="e.g. Friday afternoon, June 21st">
+
+      <label>How many dogs is this for?</label>
+      <input type="number" name="number_of_dogs" min="1" max="10">
+
+      <label>Pick-up Location:</label>
+      <input type="text" name="pickup_location">
+
+      <label>Drop-off Location (if different):</label>
+      <input type="text" name="dropoff_location">
+
+      <label>Does your dog have any special needs or quirks?</label>
+      <textarea name="special_needs" rows="3"></textarea>
+
+      <label>Any other notes or questions?</label>
+      <textarea name="notes" rows="4"></textarea>
 
       <input type="submit" value="Send Message">
     </form>
