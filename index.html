@@ -2,51 +2,258 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Furs Things First</title>
-<link rel="stylesheet" href="style.css">
+
+<!-- FONT (chunky bold style like your logo) -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+
+<style>
+
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+
+    background:
+        radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+        linear-gradient(135deg, #ff7a18, #ff5400);
+
+    background-size: 4px 4px, cover;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+nav h1 {
+    font-weight: 900;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 40px;
+    border: 4px solid #2dd4bf; /* TEAL BORDER */
+    margin: 20px;
+    border-radius: 12px;
+}
+
+/* LOGO */
+.hero img {
+    width: 300px;
+}
+
+/* HERO TEXT */
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h2 {
+    font-size: 70px;
+    line-height: 1;
+    margin: 0;
+}
+
+.hero-text p {
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.hero-text button {
+    margin-top: 20px;
+    padding: 14px 24px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.hero-text button:hover {
+    background: white;
+    color: #ff5400;
+}
+
+/* SECTION */
+.section {
+    padding: 60px 40px;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 250px;
+    border: 2px solid white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+/* ABOUT */
+.about {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about img {
+    width: 400px;
+    border-radius: 10px;
+}
+
+/* CONTACT */
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+}
+
+.contact button {
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background: white;
+    color: #ff5400;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+</style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
-    <h1>Furs Things First</h1>
+    <h1>FURS THINGS FIRST</h1>
     <div>
-        <a href="index.html">Home</a>
-        <a href="training.html">Dog Training</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="#">Home</a>
+        <a href="#">Dog Training</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
     </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
-    <img src="logo.png" alt="Furs Things First Logo">
-    <h2>Professional Dog Training</h2>
-    <p>Calm dogs. Clear communication. Real results.</p>
+
+    <img src="logo.png" alt="Logo">
+
+    <div class="hero-text">
+        <h2>
+            FURS<br>
+            THINGS<br>
+            FIRST
+        </h2>
+
+        <p>
+            Professional dog training.<br>
+            Calm dogs. Clear communication. Real results.
+        </p>
+
+        <button>BOOK A FREE CONSULTATION</button>
+    </div>
+
 </section>
 
+<!-- SERVICES -->
 <section class="section">
-    <h2>What We Specialise In</h2>
+    <h2>OUR SERVICES</h2>
 
     <div class="cards">
         <div class="card">
-            <h3>Puppy Training</h3>
-            <p>Start your puppy off right with structure and clarity.</p>
+            <h3>PUPPY TRAINING</h3>
+            <p>Start your puppy off right with structure and guidance.</p>
         </div>
 
         <div class="card">
-            <h3>Behaviour Fixes</h3>
-            <p>Stop barking, pulling, and unwanted behaviours.</p>
+            <h3>BEHAVIOUR FIXES</h3>
+            <p>Fix barking, pulling, jumping and more.</p>
         </div>
 
         <div class="card">
-            <h3>1-to-1 Coaching</h3>
-            <p>Personal training tailored to your dog.</p>
+            <h3>1-TO-1 COACHING</h3>
+            <p>Tailored training for you and your dog.</p>
         </div>
     </div>
 </section>
 
+<!-- ABOUT -->
+<section class="section about">
+
+    <div>
+        <h2>ABOUT US</h2>
+        <p>
+            At Furs Things First, we focus on real-world dog training that works.
+            Clear communication, structure, and results.
+        </p>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16">
+
+</section>
+
+<!-- CONTACT -->
+<section class="section contact">
+    <h2>GET IN TOUCH</h2>
+
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea rows="5" placeholder="Your Message"></textarea>
+    <button>SEND MESSAGE</button>
+
+</section>
+
 <footer>
-    <p>© 2026 Furs Things First</p>
+    © 2026 Furs Things First
 </footer>
 
 </body>
