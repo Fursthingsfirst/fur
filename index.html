@@ -8,227 +8,148 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
 
 <style>
-
-/* BACKGROUND */
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     color: white;
-
     background:
         radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
         linear-gradient(135deg, #ff7a18, #ff5400);
-
     background-size: 4px 4px, cover;
 }
 
-/* NAV */
 nav {
     display: flex;
     justify-content: flex-end;
-    padding: 20px 40px;
+    padding: 20px;
 }
-
 nav a {
     color: white;
     margin-left: 20px;
     text-decoration: none;
-    font-weight: 700;
 }
 
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* LOGO ABOVE */
 .top-logo {
     text-align: center;
-    margin-top: 10px;
 }
-
 .top-logo img {
-    width: 220px;
+    width: 200px;
 }
 
-/* HERO */
 .hero {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 60px 40px;
+    align-items: center;
     border: 4px solid #2dd4bf;
     margin: 20px;
+    padding: 60px;
     border-radius: 12px;
-    flex-wrap: wrap;
-}
-
-/* TEXT LEFT */
-.hero-text {
-    max-width: 420px;
 }
 
 .hero-text h2 {
     font-size: 70px;
-    line-height: 1;
     margin: 0;
 }
 
-.hero-text p {
-    margin-top: 20px;
-}
-
-/* BUTTON */
 .hero-text button {
     margin-top: 20px;
-    padding: 14px 24px;
-    background: transparent;
+    padding: 14px;
     border: 2px solid white;
+    background: transparent;
     color: white;
-    cursor: pointer;
-    font-weight: 700;
 }
 
-.hero-text button:hover {
-    background: white;
-    color: #ff5400;
-}
-
-/* SLIDER RIGHT */
 .slider {
-    width: 320px;
-    height: 320px;
+    width: 300px;
+    height: 300px;
     position: relative;
-    overflow: hidden;
-    border-radius: 12px;
 }
-
 .slide {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    transition: opacity 1s ease;
+    transition: 1s;
 }
+.slide.active { opacity: 1; }
 
-.slide.active {
-    opacity: 1;
-}
-
-/* SECTION */
 .section {
-    padding: 60px 40px;
+    padding: 40px;
 }
-
-.section h2 {
-    text-align: center;
-    font-size: 40px;
-}
-
-/* CARDS */
 .cards {
     display: flex;
     gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 30px;
 }
-
 .card {
-    flex: 1;
-    min-width: 250px;
     border: 2px solid white;
-    padding: 25px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-footer {
-    text-align: center;
     padding: 20px;
+    flex: 1;
 }
 
+footer { text-align:center; padding:20px; }
+
+/* MOBILE */
+@media(max-width:768px){
+    .hero { flex-direction:column; padding:30px; }
+    .hero-text h2 { font-size:40px; }
+    .slider { width:100%; height:200px; margin-top:20px;}
+    .cards { flex-direction:column; }
+}
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <nav>
-    <a href="index.html">Home</a>
-    <a href="training.html">Dog Training</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+<a href="index.html">Home</a>
+<a href="training.html">Dog Training</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
 </nav>
 
-<!-- LOGO ABOVE -->
 <div class="top-logo">
-    <img src="logo.png" alt="Logo">
+<img src="logo.png">
 </div>
 
-<!-- HERO -->
 <section class="hero">
 
-    <div class="hero-text">
-        <h2>
-            FURS<br>
-            THINGS<br>
-            FIRST
-        </h2>
+<div class="hero-text">
+<h2>FURS<br>THINGS<br>FIRST</h2>
+<p>Calm dogs. Clear communication. Real results.</p>
 
-        <p>
-            Professional dog training.<br>
-            Calm dogs. Clear communication. Real results.
-        </p>
+<a href="https://wa.me/353871234567" target="_blank">
+<button>BOOK A CONSULTATION NOW</button>
+</a>
+</div>
 
-        <a href="https://wa.me/353871234567?text=Hi%20I%27m%20interested%20in%20dog%20training" target="_blank">
-            <button>BOOK A CONSULTATION NOW</button>
-        </a>
-    </div>
-
-    <div class="slider">
-        <img src="dog1.jpeg" class="slide active">
-        <img src="dog2.jpeg" class="slide">
-        <img src="dog3.jpeg" class="slide">
-    </div>
+<div class="slider">
+<img src="dog1.jpeg" class="slide active">
+<img src="dog2.jpeg" class="slide">
+<img src="dog3.jpeg" class="slide">
+</div>
 
 </section>
 
-<!-- SERVICES -->
 <section class="section">
-    <h2>OUR SERVICES</h2>
-
-    <div class="cards">
-        <div class="card">
-            <h3>PUPPY TRAINING</h3>
-            <p>Start your puppy off right with structure and guidance.</p>
-        </div>
-
-        <div class="card">
-            <h3>BEHAVIOUR FIXES</h3>
-            <p>Fix barking, pulling, jumping and more.</p>
-        </div>
-
-        <div class="card">
-            <h3>1-TO-1 COACHING</h3>
-            <p>Tailored training for you and your dog.</p>
-        </div>
-    </div>
+<h2>OUR SERVICES</h2>
+<div class="cards">
+<div class="card">Puppy Training</div>
+<div class="card">Behaviour Fixes</div>
+<div class="card">1-to-1 Coaching</div>
+</div>
 </section>
 
-<footer>
-    © 2026 Furs Things First
-</footer>
+<footer>© 2026 Furs Things First</footer>
 
-<!-- SLIDER SCRIPT -->
 <script>
-let slides = document.querySelectorAll('.slide');
-let index = 0;
-
-setInterval(() => {
-    slides[index].classList.remove('active');
-    index = (index + 1) % slides.length;
-    slides[index].classList.add('active');
-}, 5000); // 5 seconds now
+let slides=document.querySelectorAll('.slide');
+let i=0;
+setInterval(()=>{
+slides[i].classList.remove('active');
+i=(i+1)%slides.length;
+slides[i].classList.add('active');
+},5000);
 </script>
 
 </body>
