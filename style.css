@@ -1,8 +1,14 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #0f172a;
     color: white;
+
+    background:
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.08) 1px, transparent 1px),
+        radial-gradient(circle at 80% 70%, rgba(255,255,255,0.06) 1px, transparent 1px),
+        linear-gradient(135deg, #ff7a18, #ffb347, #2dd4bf);
+
+    background-size: 3px 3px, 4px 4px, cover;
 }
 
 /* NAV */
@@ -11,36 +17,42 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background: #020617;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(6px);
 }
 
 nav h1 {
-    color: #14b8a6;
+    color: white;
 }
 
 nav a {
-    color: white;
+    color: #2dd4bf;
     text-decoration: none;
     margin-left: 20px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    color: #f97316;
+    color: white;
 }
 
 /* HERO */
 .hero {
     text-align: center;
     padding: 100px 20px;
-    background: linear-gradient(135deg, #14b8a6, #f97316);
+}
+
+.hero img {
+    width: 180px;
+    margin-bottom: 20px;
 }
 
 .hero h2 {
-    font-size: 50px;
+    font-size: 48px;
 }
 
-/* SECTION */
+/* SECTIONS */
 .section {
     padding: 80px 20px;
     max-width: 1000px;
@@ -48,7 +60,7 @@ nav a:hover {
 }
 
 .section h2 {
-    color: #14b8a6;
+    color: #2dd4bf;
 }
 
 /* CARDS */
@@ -59,16 +71,16 @@ nav a:hover {
 }
 
 .card {
-    background: #020617;
+    background: rgba(0,0,0,0.5);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
     flex: 1;
     min-width: 250px;
-    border: 1px solid #14b8a6;
+    backdrop-filter: blur(8px);
 }
 
 .card h3 {
-    color: #f97316;
+    color: #ff7a18;
 }
 
 /* CONTACT */
@@ -76,25 +88,25 @@ nav a:hover {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border-radius: 5px;
+    border-radius: 6px;
     border: none;
 }
 
 button {
-    background: #f97316;
+    background: #ff7a18;
     border: none;
     padding: 12px 20px;
     color: white;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
 }
 
 button:hover {
-    background: #ea580c;
+    background: #e86000;
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background: #020617;
+    background: rgba(0,0,0,0.4);
 }
