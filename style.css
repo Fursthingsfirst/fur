@@ -1,95 +1,98 @@
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #0f172a; /* deep dark */
+    background: #0f172a;
     color: white;
 }
 
-/* NAVBAR */
-.navbar {
+/* NAV */
+nav {
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
     background: #020617;
-    padding: 15px;
 }
 
-.navbar a {
-    color: #f59e0b;
+nav h1 {
+    color: #14b8a6;
+}
+
+nav a {
+    color: white;
     text-decoration: none;
+    margin-left: 20px;
     font-weight: bold;
 }
 
-.navbar a:hover {
-    color: #22c55e;
+nav a:hover {
+    color: #f97316;
 }
 
 /* HERO */
 .hero {
     text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #0ea5a5, #f59e0b);
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #14b8a6, #f97316);
 }
 
-.hero img {
-    width: 120px;
-    margin-bottom: 10px;
+.hero h2 {
+    font-size: 50px;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin: 0;
-    text-shadow: 2px 2px #000;
+/* SECTION */
+.section {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: auto;
 }
 
-.hero p {
-    margin-top: 10px;
+.section h2 {
+    color: #14b8a6;
 }
 
-/* SERVICES */
-.services {
+/* CARDS */
+.cards {
     display: flex;
-    justify-content: center;
-    padding: 40px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .card {
-    background: #1e293b;
-    border-radius: 15px;
-    overflow: hidden;
-    width: 300px;
-    text-align: center;
-    transition: 0.3s;
+    background: #020617;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 250px;
+    border: 1px solid #14b8a6;
 }
 
-.card img {
+.card h3 {
+    color: #f97316;
+}
+
+/* CONTACT */
+.contact input, .contact textarea {
     width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
 }
 
-.card h2 {
-    color: #f59e0b;
-}
-
-.card p {
-    padding: 0 15px;
-}
-
-.card a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background: #0ea5a5;
+button {
+    background: #f97316;
+    border: none;
+    padding: 12px 20px;
     color: white;
-    text-decoration: none;
-    border-radius: 8px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.card:hover {
-    transform: scale(1.05);
+button:hover {
+    background: #ea580c;
 }
 
-/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
