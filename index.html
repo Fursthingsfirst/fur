@@ -5,19 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Furs Things First</title>
 
-<!-- FONT (chunky bold style like your logo) -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
 
 <style>
 
-/* GLOBAL */
+/* BACKGROUND */
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     color: white;
 
     background:
-        radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+        radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
         linear-gradient(135deg, #ff7a18, #ff5400);
 
     background-size: 4px 4px, cover;
@@ -52,19 +51,20 @@ nav a:hover {
     align-items: center;
     justify-content: space-between;
     padding: 80px 40px;
-    border: 4px solid #2dd4bf; /* TEAL BORDER */
+    border: 4px solid #2dd4bf;
     margin: 20px;
     border-radius: 12px;
+    flex-wrap: wrap;
 }
 
 /* LOGO */
-.hero img {
-    width: 300px;
+.hero img.logo {
+    width: 260px;
 }
 
-/* HERO TEXT */
+/* TEXT */
 .hero-text {
-    max-width: 500px;
+    max-width: 400px;
 }
 
 .hero-text h2 {
@@ -75,9 +75,9 @@ nav a:hover {
 
 .hero-text p {
     margin-top: 20px;
-    font-weight: 500;
 }
 
+/* BUTTON */
 .hero-text button {
     margin-top: 20px;
     padding: 14px 24px;
@@ -93,6 +93,28 @@ nav a:hover {
     color: #ff5400;
 }
 
+/* SLIDER */
+.slider {
+    width: 320px;
+    height: 320px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
 /* SECTION */
 .section {
     padding: 60px 40px;
@@ -101,7 +123,6 @@ nav a:hover {
 .section h2 {
     text-align: center;
     font-size: 40px;
-    margin-bottom: 40px;
 }
 
 /* CARDS */
@@ -109,19 +130,16 @@ nav a:hover {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    margin-top: 30px;
 }
 
 .card {
     flex: 1;
     min-width: 250px;
     border: 2px solid white;
-    padding: 30px;
+    padding: 25px;
     border-radius: 10px;
     text-align: center;
-}
-
-.card h3 {
-    margin-bottom: 10px;
 }
 
 /* ABOUT */
@@ -133,7 +151,7 @@ nav a:hover {
 }
 
 .about img {
-    width: 400px;
+    width: 350px;
     border-radius: 10px;
 }
 
@@ -185,7 +203,7 @@ footer {
 <!-- HERO -->
 <section class="hero">
 
-    <img src="logo.png" alt="Logo">
+    <img src="logo.png" class="logo" alt="Logo">
 
     <div class="hero-text">
         <h2>
@@ -199,7 +217,13 @@ footer {
             Calm dogs. Clear communication. Real results.
         </p>
 
-        <button>BOOK A CONSULTATION NOW</button>
+        <button>BOOK A FREE CONSULTATION</button>
+    </div>
+
+    <div class="slider">
+        <img src="dog1.jpg" class="slide active">
+        <img src="dog2.jpg" class="slide">
+        <img src="dog3.jpg" class="slide">
     </div>
 
 </section>
@@ -227,11 +251,21 @@ footer {
 </section>
 
 
-    
-
 <footer>
     © 2026 Furs Things First
 </footer>
+
+<!-- SLIDER SCRIPT -->
+<script>
+let slides = document.querySelectorAll('.slide');
+let index = 0;
+
+setInterval(() => {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+}, 3000);
+</script>
 
 </body>
 </html>
