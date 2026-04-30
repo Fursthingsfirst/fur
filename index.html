@@ -40,7 +40,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* LOGO ABOVE HERO */
+/* LOGO ABOVE */
 .top-logo {
     text-align: center;
     margin-top: 10px;
@@ -142,43 +142,6 @@ nav a:hover {
     text-align: center;
 }
 
-/* ABOUT */
-.about {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.about img {
-    width: 350px;
-    border-radius: 10px;
-}
-
-/* CONTACT */
-.contact input, .contact textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 10px;
-    border: 2px solid white;
-    background: transparent;
-    color: white;
-}
-
-.contact button {
-    border: 2px solid white;
-    background: transparent;
-    color: white;
-    padding: 12px 20px;
-    cursor: pointer;
-}
-
-.contact button:hover {
-    background: white;
-    color: #ff5400;
-}
-
-/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
@@ -191,10 +154,10 @@ footer {
 
 <!-- NAV -->
 <nav>
-    <a href="#">Home</a>
-    <a href="#">Dog Training</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="training.html">Dog Training</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
 </nav>
 
 <!-- LOGO ABOVE -->
@@ -217,15 +180,15 @@ footer {
             Calm dogs. Clear communication. Real results.
         </p>
 
-        <button>BOOK A CONSULTATION NOW</button>
+        <a href="https://wa.me/353871234567?text=Hi%20I%27m%20interested%20in%20dog%20training" target="_blank">
+            <button>BOOK A FREE CONSULTATION</button>
+        </a>
     </div>
 
     <div class="slider">
         <img src="dog1.jpeg" class="slide active">
         <img src="dog2.jpeg" class="slide">
         <img src="dog3.jpeg" class="slide">
-        <img src="dog4.jpeg" class="slide">
-        <img src="dog5.jpeg" class="slide">
     </div>
 
 </section>
@@ -252,7 +215,6 @@ footer {
     </div>
 </section>
 
-
 <footer>
     © 2026 Furs Things First
 </footer>
@@ -266,7 +228,7 @@ setInterval(() => {
     slides[index].classList.remove('active');
     index = (index + 1) % slides.length;
     slides[index].classList.add('active');
-}, 5000);
+}, 5000); // 5 seconds now
 </script>
 
 </body>
