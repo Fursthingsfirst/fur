@@ -1,13 +1,71 @@
+✅ UPDATED about.html (FULL FILE)
+
+Replace your whole file with this:
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About</title>
+<title>About | Furs Things First</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+
 <style>
-body { font-family:Arial; background:#ff5400; color:white; margin:0; }
-nav { text-align:right; padding:20px;}
-nav a{color:white;margin-left:20px;}
-.box { max-width:800px; margin:40px auto; border:3px solid #2dd4bf; padding:30px;}
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background:
+        radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(135deg, #ff7a18, #ff5400);
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 40px;
+}
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+/* LOGO */
+.top-logo {
+    text-align: center;
+}
+.top-logo img {
+    width: 200px;
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    margin-top: 10px;
+}
+.header h1 {
+    font-size: 40px;
+}
+
+/* CONTENT */
+.box {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px;
+    border: 4px solid #2dd4bf;
+    border-radius: 12px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .box {
+        margin:20px;
+        padding:25px;
+    }
+}
 </style>
 </head>
 
@@ -20,9 +78,29 @@ nav a{color:white;margin-left:20px;}
 <a href="contact.html">Contact</a>
 </nav>
 
+<div class="top-logo">
+<img src="logo.png">
+</div>
+
+<div class="header">
+<h1>ABOUT FURS THINGS FIRST</h1>
+</div>
+
 <div class="box">
-<h1>About</h1>
-<p>I help dog owners build calm, well-behaved dogs using simple, practical training.</p>
+<p>
+I help dog owners build calm, well-behaved dogs using simple,
+practical training that works in real life.
+</p>
+
+<p>
+From puppies to behaviour issues like barking or pulling,
+everything is tailored to you and your dog.
+</p>
+
+<p>
+No overcomplicated methods—just clear structure,
+consistency, and real results.
+</p>
 </div>
 
 </body>
