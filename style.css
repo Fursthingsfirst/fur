@@ -1,75 +1,97 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
-
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #d6efff;
+    font-family: Arial, sans-serif;
+    background: #0f172a; /* deep dark */
     color: white;
 }
 
-header {
-    background-color: #d6efff;
-    text-align: center;
-    padding: 3em 1em 2em;
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background: #020617;
+    padding: 15px;
 }
 
-header h1 {
-    font-family: 'Pacifico', cursive;
-    font-size: 4rem;
-    color: #0077b6;
-    text-shadow: 2px 2px 4px black;
-    margin: 0;
-}
-
-header p {
-    font-size: 1.4rem;
-    margin-top: 0.5em;
-    text-shadow: 1px 1px 2px black;
-}
-
-nav {
-    background-color: #4fa3d1;
-    padding: 1em;
-    text-align: center;
-}
-
-nav a {
-    margin: 0 1em;
-    color: white;
+.navbar a {
+    color: #f59e0b;
     text-decoration: none;
     font-weight: bold;
 }
 
-.container {
+.navbar a:hover {
+    color: #22c55e;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #0ea5a5, #f59e0b);
+}
+
+.hero img {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 2px 2px #000;
+}
+
+.hero p {
+    margin-top: 10px;
+}
+
+/* SERVICES */
+.services {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 2em;
-    padding: 2em;
+    padding: 40px;
 }
 
 .card {
-    background-color: #0077b6;
-    color: white;
-    text-shadow: 1px 1px 2px black;
-    border-radius: 12px;
+    background: #1e293b;
+    border-radius: 15px;
+    overflow: hidden;
     width: 300px;
-    padding: 1.5em;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     text-align: center;
+    transition: 0.3s;
 }
 
 .card img {
-    max-width: 100%;
-    border-radius: 10px;
-    margin-bottom: 1em;
+    width: 100%;
 }
 
+.card h2 {
+    color: #f59e0b;
+}
+
+.card p {
+    padding: 0 15px;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #0ea5a5;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* FOOTER */
 footer {
-    background: #4fa3d1;
     text-align: center;
-    padding: 1.5em;
-    margin-top: 2em;
-    font-weight: bold;
+    padding: 20px;
+    background: #020617;
 }
