@@ -8,6 +8,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
 
 <style>
+
+/* BACKGROUND */
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
@@ -23,10 +25,12 @@ nav {
     justify-content: flex-end;
     padding: 20px 40px;
 }
+
 nav a {
     color: white;
     margin-left: 20px;
     text-decoration: none;
+    font-weight: 700;
 }
 
 /* LOGO */
@@ -40,14 +44,13 @@ nav a {
 /* HEADER */
 .header {
     text-align: center;
-    margin-top: 10px;
 }
 .header h1 {
     font-size: 40px;
 }
 
-/* BOX */
-.box {
+/* CONTACT BOX */
+.contact-box {
     max-width: 700px;
     margin: 40px auto;
     padding: 40px;
@@ -56,53 +59,118 @@ nav a {
     text-align: center;
 }
 
+/* TEXT */
+.contact-box h2 {
+    margin-bottom: 5px;
+}
+
+.contact-box p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* EMAIL ROW */
+.email-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ICON */
+.icon {
+    width: 20px;
+}
+
 /* SOCIALS */
+.socials {
+    margin-top: 20px;
+}
+
 .socials img {
     width: 45px;
     margin: 10px;
+    transition: 0.2s;
+}
+
+.socials img:hover {
+    transform: scale(1.1);
 }
 
 /* MOBILE */
 @media(max-width:768px){
-    .box {
+    .contact-box {
         margin:20px;
         padding:25px;
     }
 }
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
-<a href="index.html">Home</a>
-<a href="training.html">Dog Training</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="training.html">Dog Training</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
 </nav>
 
+<!-- LOGO -->
 <div class="top-logo">
-<img src="logo.png">
+    <img src="logo.png" alt="Logo">
 </div>
 
+<!-- HEADER -->
 <div class="header">
-<h1>GET IN TOUCH</h1>
+    <h1>GET IN TOUCH</h1>
 </div>
 
-<div class="box">
+<!-- CONTACT BOX -->
+<div class="contact-box">
 
-<h2>Adam Murphy</h2>
-<p>📞 085 137 4535</p>
+    <!-- NAME + PHONE -->
+    <h2>Adam Murphy</h2>
+    <p>📞085 137 4535</p>
 
-<p>fursthingsfirst1@gmail.com</p>
+    <!-- EMAIL WITH ICON -->
+    <div class="email-row">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" class="icon">
+        <p>fursthingsfirst1@gmail.com</p>
+    </div>
 
-<div class="socials">
-<a href="https://wa.me/353871234567"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"></a>
-<a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png"></a>
-<a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"></a>
+    <!-- SOCIAL LINKS -->
+    <div class="socials">
+
+        <!-- WHATSAPP -->
+        <a href="https://wa.me/353871234567?text=Hi%20I%27m%20interested%20in%20dog%20training" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+        </a>
+
+        <!-- INSTAGRAM -->
+        <a href="https://www.instagram.com/furs_things_first/" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
+        </a>
+
+        <!-- FACEBOOK (TEMP - replace later with clean link) -->
+        <a href="https://www.facebook.com/share/1BnwsN5Z4q/?mibextid=wwXIfr" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+        </a>
+
+    </div>
+
 </div>
 
-</div>
+<footer>
+    © 2026 Furs Things First
+</footer>
 
 </body>
 </html>
